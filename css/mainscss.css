@@ -1,0 +1,206 @@
+.info-hero__adv {
+  background-image: url("../../images/persent-img.svg"), linear-gradient(125.17deg, #272727 0%, #11101D 100%);
+  background-position: left 10px center, left top;
+}
+
+.hero-word {
+  background: radial-gradient(64.18% 64.18% at 71.16% 35.69%, #DEF9FA 0.89%, #BEF3F5 17.23%, #9DEDF0 42.04%, #7DE7EB 55.12%, #5CE1E6 71.54%, #33BBCF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info {
+  position: relative;
+}
+.info::before {
+  position: absolute;
+  top: 0;
+  left: -200px;
+  display: inline-block;
+  width: 230px;
+  height: 400px;
+  content: "";
+  background: #FFFFFF;
+  filter: blur(200px);
+}
+
+.statistics-item {
+  position: relative;
+}
+.statistics-item:nth-child(2)::before {
+  position: absolute;
+  top: -15px;
+  display: inline-block;
+  width: 150px;
+  height: 2px;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.statistics-item:last-child::before {
+  position: absolute;
+  top: -15px;
+  display: inline-block;
+  width: 150px;
+  height: 2px;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.get-started {
+  background: linear-gradient(157.81deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%);
+}
+
+.feedback__item::before {
+  margin-bottom: 40px;
+  display: inline-block;
+  width: 42px;
+  height: 28px;
+  content: "";
+  background-image: url("../../images/quote.png");
+}
+
+@media only screen and (min-width: 1024px) {
+  .item-filter {
+    position: relative;
+  }
+  .item-filter::before {
+    position: absolute;
+    top: 0;
+    right: 88%;
+    transform: translateY(-20%) rotate(176.62deg);
+    display: inline-block;
+    width: 425px;
+    height: 600px;
+    content: "";
+    background: rgba(255, 255, 255, 0.6);
+    filter: blur(150px);
+  }
+  .statistics-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .statistics-item:nth-child(2)::before {
+    position: absolute;
+    top: initial;
+    left: -25px;
+    display: inline-block;
+    width: 2px;
+    height: 15px;
+    content: "";
+  }
+  .statistics-item:last-child::before {
+    position: absolute;
+    top: initial;
+    left: -25px;
+    display: inline-block;
+    width: 2px;
+    height: 15px;
+    content: "";
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .feedback {
+    position: relative;
+    overflow-x: hidden;
+  }
+  .feedback::after {
+    position: absolute;
+    top: 240px;
+    left: calc(50% + 600px);
+    z-index: 1000;
+    display: block;
+    width: 176px;
+    height: 330px;
+    content: "";
+    background-image: linear-gradient(90deg, #1A2980 0%, #26D0CE 100%);
+    filter: blur(160px);
+    border-radius: 200px;
+    transform: rotate(47.46deg);
+  }
+  .statistics-item:nth-child(2)::before {
+    left: -80px;
+  }
+  .statistics-item:last-child::before {
+    left: -80px;
+  }
+}
+.sitenav {
+  display: none;
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  width: 250px;
+  height: auto;
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.sitenav-open {
+  display: block;
+}
+
+.sitenav__list {
+  flex-direction: column;
+  margin-left: auto;
+  padding: 20px;
+  background: linear-gradient(144.39deg, #FFFFFF -278.56%, #6D6D6D -78.47%, #11101D 91.61%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 20px;
+  color: wheat;
+}
+
+.sitenav__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.burger-btn-open {
+  background-image: url("../../images/x-btn.svg");
+  transition: 0.2s ease;
+}
+
+@media only screen and (min-width: 640px) {
+  .sitenav {
+    display: block;
+    position: static;
+    width: auto;
+    -webkit-animation: none;
+            animation: none;
+  }
+  .sitenav__list {
+    flex-direction: row;
+    margin-left: 0;
+    padding: 0;
+    background: transparent;
+    -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .sitenav__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 56px;
+  }
+  .sitenav__item .active {
+    color: rgb(255, 255, 255);
+  }
+}/*# sourceMappingURL=mainscss.css.map */
